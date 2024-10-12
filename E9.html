@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Ejercicio 9</h1>
+    <span>Comprobación de fecha</span>
+    <div class="frase">
+        <form>
+            <input id="fecha" type="text">
+            <button onclick="comprobarFecha()">COMPROBAR FECHA</button><br><br>
+        </form>
+    </div>
+    <script>
+        function comprobarFecha(){
+            // 0? Permite que se use o no el cero a la izquierda
+            // [12][0-9] indica dos digitos, el primero puede ser uno o dos, el segundo puede ir del 1 al 9
+            // 3[01] indica dos dígitos, el primero solo puede ser 3, y el segundo puede ser uno o dos.
+            // \d{2} y \d{4} indican una cifra de dos o cuatro digitos
+            // el | es un OR y las distintas partes de la fecha se separan mediante paréntesis con ORs dentro
+            // la barra de fecha se escapa con contrabarra
+            // marcamos el principio y el final de la cadena con ^ y $, para que no siga validando fuera de este patrón
+
+            let patron = /^(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[0-2])\/(\d{2}|\d{4})$/;
+            let fecha = document.getElementById('fecha').value;
+            if (patron.test(fecha)){
+                alert ("Todo OK");
+            } else {
+                alert ("Formato incorrecto");
+            }
+        }
+
+    </script>
+</body>
+</html>

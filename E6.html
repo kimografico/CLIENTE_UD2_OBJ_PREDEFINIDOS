@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Ejercicio 6</h1>
+    <span>Formato de fecha</span>
+    <script>
+            let fechaActual = new Date();
+            let dia = fechaActual.getDate();
+            let mes = fechaActual.getMonth();
+            let anio = fechaActual.getFullYear();
+            let diaSemana = fechaActual.getDay();
+
+            let dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+            let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+            let mensaje = "Hoy es " + dias[diaSemana] + ", " + dia + " de " + meses[mes] + " de " + anio
+
+            alert (mensaje);
+    </script>
+</body>
+</html>

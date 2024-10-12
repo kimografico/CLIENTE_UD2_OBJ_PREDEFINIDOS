@@ -1,0 +1,70 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+button{
+    background-color:lightgreen;
+    padding: 10px 50px;
+    border: 0px;
+    border-radius: 25px;
+    transition: 0.5s;
+    width: 100%;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: green;
+    color: white;
+    padding: 10px 50px;
+    border: 0px;
+    border-radius: 25px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.frase, .resultado {
+    padding: 30px 25px 10px 25px;
+    margin: 25px;
+    background-color:#CCC;
+    max-width:750px;
+    border-radius: 25px;
+}
+
+.frase{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+input[type="text"]{
+    width: 95%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 0px;
+    margin-top: 5px;
+}
+
+h1, span{
+    padding: 5px 30px;
+}
+
+table{
+    border: solid 1px black;
+    text-align: center;
+    margin-top: 25px;
+    background-color: #EEE;
+}
+
+td{
+    width: 30px;
+    height: 50px;
+    border: solid 1px black;
+    padding: 0px 10px;
+}
+
+input[type="text"].numeros {
+    width: 25%;
+    margin: 2%;
+}

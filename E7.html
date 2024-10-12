@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Ejercicio 7</h1>
+    <span>Cálculo de dias desde el nacimiento</span>
+    <script>
+        let respuesta = prompt ("¿Que dia naciste? YYYY/MM/DD");
+        let nacimiento = new Date (respuesta);
+        let hoy = new Date();
+        let milisegundos =  (hoy.getTime() - nacimiento.getTime());
+        let diasDiferencia = Math.round(milisegundos / (1000 * 60 * 60 * 24));
+
+        const diasPorAnio = 365.25; // Días por año teniendo en cuenta los años bisiestos
+        const diasPorMes = diasPorAnio / 12; // Días por mes
+
+        let calcAnios = Math.floor(diasDiferencia / diasPorAnio);  // Se dividen los dias por los dias por año para sacar los años, redondeando hacia abajo
+        let diasSobrantes = diasDiferencia - (calcAnios * diasPorAnio);  // Se calculan los dias que sobran tras restarle los años
+
+        let calcMeses = Math.floor(diasSobrantes / diasPorMes); // Se calculan los meses equivalentes a los dias que sobran
+        diasSobrantes = diasSobrantes - (calcMeses * diasPorMes);
+
+        let calcDias = Math.floor(diasSobrantes); // Días sobrantes
+
+        alert ("Naciste hace " + diasDiferencia + " dias\nEso son " + calcAnios + " años, " + calcMeses + " meses y " + calcDias + " dias.");
+
+    </script>
+</body>
+</html>

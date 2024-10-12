@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Ejercicio 5</h1>
+    <div class="resultado">
+        <input class="numeros" type="text"></input>
+        <input class="numeros" type="text"></input>
+        <input class="numeros" type="text"></input>
+        <input class="numeros" type="text"></input>
+        <input class="numeros" type="text"></input>
+        <input class="numeros" type="text"></input>
+        <input class="numeros" type="text"></input>
+        <input class="numeros" type="text"></input>
+        <input class="numeros" type="text"></input>
+    <button onclick="valorarNumeros()">¿CUAL ES EL NÚMERO MAYOR?</button><br><br>
+
+    </div>        
+    <script>
+            function valorarNumeros(){
+            let numeros = document.querySelectorAll("input");
+            let maximo = 0;
+            numeros.forEach(elemento => {
+                let numeroReal = Number(elemento.value);
+                if (numeroReal > maximo){
+                    maximo = numeroReal;
+                }
+            });
+            alert ("El numero más alto es el " + maximo);
+        }
+
+    </script>
+</body>
+</html>

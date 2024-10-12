@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Ejercicio 8</h1>
+    <span>Cálculo de edad</span>
+    <div class="frase">
+        <form>
+            <input id="fecha" type="date">
+            <button onclick="comprobarFecha()">COMPROBAR FECHA</button>
+        </form>
+    </div>
+    <script>
+        function comprobarFecha(){
+            let fechaUser = document.getElementById('fecha');
+            let anio = fechaUser.value.slice(0, 4);
+            let fecha = new Date().getFullYear();
+            alert ("Tienes " + (fecha - anio) + " años aproximadamente");
+        }
+
+    </script>
+</body>
+</html>

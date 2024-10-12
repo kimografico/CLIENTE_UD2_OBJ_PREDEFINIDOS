@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+    <div class="frase">
+    <label for="frase">Introduce una palabra</label>
+    <input id="frase" type="text" onchange="rellenarTabla()"></input>
+    <table>
+        <tr id="tabla"></tr>
+    </table> <!-- No se por que me sale un punto -->
+    <br>
+    </div>        
+    <script>
+            function rellenarTabla(){
+            let palabra = document.getElementById('frase').value.toUpperCase();
+            let tabla = document.getElementById('tabla');
+            tabla.innerHTML = '';
+            for (let i = 0; i <= palabra.length -1; i++){
+                tabla.innerHTML += "<td>" + palabra[i] + "</td>";
+            }
+        }
+
+    </script>
+</body>
+</html>

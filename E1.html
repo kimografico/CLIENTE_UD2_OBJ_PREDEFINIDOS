@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <form>
+        <div class="frase">
+        <label for="cadena">Introduce una cadena de texto </label>
+        <input id="cadena" type="text"></input><br>
+        <button onclick="convertirCadena()">Convierte la cadena</button><br><br>
+        </div>
+        <div class="resultado">
+        <label for="inversa">A la inversa </label>
+        <input id="inversa" type="text"></input><br>
+        <label for="mayus">En mayúsculas </label>
+        <input id="mayus" type="text"></input><br>
+        <label for="repetida">Repetida </label>
+        <input id="repetida" type="text"></input><br>
+        <label for="inversamayus">Inversa en mayúsculas </label>
+        <input id="inversamayus" type="text"></input><br><br>
+        </div>
+    </form>
+        
+    <script>
+        function convertirCadena(){
+            event.preventDefault();
+            let cadena = document.getElementById('cadena').value;
+
+            let inversa = document.getElementById('inversa');
+            let mayus = document.getElementById('mayus');
+            let repetida = document.getElementById('repetida');
+            let inversamayus = document.getElementById('inversamayus');
+
+            let cadenainversa = '';
+            for (let i = cadena.length -1; i >= 0; i--){
+                let letra = cadena[i];
+                cadenainversa = cadenainversa + letra;
+            }
+
+            inversa.value = cadenainversa;
+            mayus.value = cadena.toUpperCase();
+            repetida.value = cadena + cadena + cadena;
+            inversamayus.value = inversa.value.toUpperCase();
+        }
+
+    </script>
+</body>
+</html>

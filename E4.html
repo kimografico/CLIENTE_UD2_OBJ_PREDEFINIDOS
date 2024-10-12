@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+    <div class="resultado">
+    <label for="frase">Introduce un número</label>
+    <input id="frase" type="text"></input>
+    <button onclick="rellenarTabla()">CONVERTIR</button>
+    <table>
+        <tr>
+            <td><b>BINARI</b></td>
+            <td id="binario"></td>
+        </tr>
+        <tr>
+            <td><b>OCTAL</b></td>
+            <td id="octal"></td>
+        </tr>
+        <tr>
+            <td><b>HEXADECIMAL</b></td>
+            <td id="hexadecimal"></td>
+        </tr>
+    </table> <!-- No se por que me sale un punto -->
+    <br>
+    </div>        
+    <script>
+            function rellenarTabla(){
+            let numero = Number(document.getElementById('frase').value);
+            
+            document.getElementById("binario").innerText = numero.toString(2);
+            document.getElementById("octal").innerText = numero.toString(8);
+            document.getElementById("hexadecimal").innerText = numero.toString(16);
+        }
+
+    </script>
+</body>
+</html>
